@@ -20,7 +20,7 @@ SCC <- readRDS("./data/Source_Classification_Code.rds")
 
 ## Answer:
 
-if(!library(ggplot2)){install.packages("ggplot2")}
+
 library(ggplot2)
 
 BaltimoreCity<- NEI[NEI$fips == "24510", ]

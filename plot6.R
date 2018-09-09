@@ -18,7 +18,7 @@ SCC <- readRDS("./data/Source_Classification_Code.rds")
 
 ## Answer:
 
-if(!library(ggplot2)){install.packages("ggplot2")}
+
 library(ggplot2)
 
 BaltimoreCityVehicle<- NEI[NEI$fips == "24510" & NEI$type == "ON-ROAD", ]
@@ -39,7 +39,7 @@ g<- ggplot(BC.LA.Totals)+geom_bar(aes(x = factor(year), y= LA,  fill = "LA"),sta
         geom_bar(data = BC.LA.Totals, aes(x = factor(year), y= BC, fill = "BC") , stat = "identity")+
         labs(x = "year", y = "Total PM2.5 (tons)", title = "Comparison of Total PM2.5 from Vehicles in Baltimore City
              \n and Los Angeles County")+
-        guides(fill = guide_legend(title = "Location"))+
+        guides(fill = guide_legend(title = "Location"))
         
 print(g)        
 dev.off()
